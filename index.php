@@ -1,16 +1,17 @@
 <?php 
 
 require_once("vendor/autoload.php");
+use \Slim\Slim;
+use \Ecommerce\Page;
 
-$app = new \Slim\Slim();
+$app = new Slim();
 
 $app->config('debug', true);
 
 $app->get('/', function() {
     
-	$sql = new Ecommerce\DB\Sql();
-	$rsesults = $sql->select("SELECT * FROM tb_users");
-	echo json_encode($rsesults);
+	$page = new Page();
+	$page->setTpl("index");
 
 });
 
