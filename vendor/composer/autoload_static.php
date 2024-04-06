@@ -6,8 +6,18 @@ namespace Composer\Autoload;
 
 class ComposerStaticInitfcf4d6488f7e4b0b426989932fd87ee5
 {
-    public static $fallbackDirsPsr4 = array (
-        0 => __DIR__ . '/..' . '/leandrodbz/php-classes/src',
+    public static $prefixLengthsPsr4 = array (
+        'E' => 
+        array (
+            'Exemple\\' => 8,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'Exemple\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/leandrodbz/php-classes/src',
+        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -42,7 +52,8 @@ class ComposerStaticInitfcf4d6488f7e4b0b426989932fd87ee5
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->fallbackDirsPsr4 = ComposerStaticInitfcf4d6488f7e4b0b426989932fd87ee5::$fallbackDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitfcf4d6488f7e4b0b426989932fd87ee5::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitfcf4d6488f7e4b0b426989932fd87ee5::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInitfcf4d6488f7e4b0b426989932fd87ee5::$prefixesPsr0;
             $loader->classMap = ComposerStaticInitfcf4d6488f7e4b0b426989932fd87ee5::$classMap;
 

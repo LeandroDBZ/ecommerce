@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    '' => array($vendorDir . '/leandrodbz/php-classes/src'),
+    'Exemple\\' => array($vendorDir . '/leandrodbz/php-classes/src'),
 );

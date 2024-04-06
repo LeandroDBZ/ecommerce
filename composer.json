@@ -13,7 +13,7 @@
     },
     "autoload": {
         "psr-4": {
-            "": "vendor\\leandrodbz\\php-classes\\src"
+            "Exemple\\": "vendor\\leandrodbz\\php-classes\\src"
         }
     }
 }
